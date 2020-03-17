@@ -1,7 +1,5 @@
-﻿@model MVCRudnev.Models.Book
-@{
-    Layout = null;
-
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -11,10 +9,9 @@
     <title>Покупка</title>
 </head>
 <body>
-    <div>
-        <h3>Форма оформления покупки</h3>
+    <div class="content2">
         <form method="post" action="">
-            <input type="hidden" value="@ViewBag.BookId" name="BookId"/>
+            <input type="hidden" value="@ViewBag.BookId" name="BookId" />
             <table>
                 <tr>
                     <td><p>Введите свое имя </p></td>

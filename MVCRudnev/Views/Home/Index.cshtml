@@ -1,25 +1,22 @@
-﻿@model MVCRudnev.Models.Purchase
-@{
-    ViewBag.Title = "Home Page";
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div>
-    <h3>Распродажа книг</h3>
-    <table>
-        <tr>
-            <td><p>Название книги</p></td>
-            <td><p>Автор</p></td>
-            <td><p>Цена</p></td>
-            <td></td>
-        </tr>
-        @foreach (var b in ViewBag.Books)
-        {
+    <div class="maincontent">
+        <table id="tablesale">
             <tr>
-                <td><p>@b.Name</p></td>
-                <td><p>@b.Author</p></td>
-                <td><p>@b.Price</p></td>
-                <td><p><a href="/Home/Buy/@b.Id">Купить</a></p></td>
+                <th><p>Название книги</p></th>
+                <th><p id="autor">Автор</p></th>
+                <th><p>Цена</p></th>
             </tr>
-        }
-    </table>
-</div>
+            @foreach (var b in ViewBag.Books)
+            {
+                <tr>
+                    <td><p>@b.Name</p></td>
+                    <td><p>@b.Author</p></td>
+                    <td><p>@b.Price</p></td>
+                    <td><p><a href="/Home/Buy/@b.Id">Купить</a></p></td>
+                </tr>
+            }
+        </table>
+    </div>
